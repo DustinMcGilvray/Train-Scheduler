@@ -79,7 +79,7 @@ $("#addTrainButton").on("click", function(event) {
     var timeDiff = moment().diff(moment(trainTimeConverted), "minutes");
     console.log("DIFFERENCE IN TIME: " + timeDiff);
     //TRAIN TIME APART
-    var timeApart = timeDiff % timeFreq;
+    var timeApart = timeDiff % trainFreq;
     console.log(timeApart);
     //MINUTES UNTIL NEXT TRAIN
     var arrivalTrain = trainFreq - timeApart;
