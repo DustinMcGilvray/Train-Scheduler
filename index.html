@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,83 @@
     <title>Train Scheduler</title>
     <!--jQUERY CDN-->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Moment.js CDN -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <!--FIREBASE LINK-->
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <!--CSS Reset-->
     <link rel="style sheet" href="assets/css/reset.css">
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-    crossorigin="anonymous">
+        crossorigin="anonymous">
     <!--Local CSS-->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
+    <!--START CONTAINER-->
+    <div class="container">
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Fluid jumbotron</h1>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+        </div>
 
 
+        <div class="card">
+            <div class="card-header">
+                Current Train Schedule
+            </div>
+            <div class="card-body">
+                <table id="train_table" class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency(min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+                <p class="card-text"></p>
+            </div>
+        </div>
+<br>
+        <div class="card">
+            <div class="card-header">
+                Add Train
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="firstTrainName">Train Name</label>
+                        <input type="text" class="form-control" id="nameInput" placeholder="Train Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" class="form-control" id="destInput" placeholder="Destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstTrainTime">Train Time (HH:MM - Military Time)</label>
+                        <input type="text" class="form-control" id="trainTimeInput"  placeholder="First Train Time">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency">Frequency (mins)</label>
+                        <input type="text" class="form-control" id="freqInput"  placeholder="Frequency">
+                    </div>
 
-
-
-
-
+                    <button id="addTrainButton" type="submit" class="btn btn-outline-dark">Submit</button>
+                </form>
+            </div>
+        </div>
+        <!--END CONTAINER-->
+    </div>
 
 
 
@@ -42,4 +102,5 @@
     <!--LOCAL JAVASCRIPT-->
     <script src="assets/javascript/app.js"></script>
 </body>
+
 </html>
