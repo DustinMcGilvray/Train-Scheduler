@@ -15,12 +15,12 @@ p {
 
 .jumbotron {
     color: ghostwhite;
-    background: rgba(165, 163, 163, 0.644);
+    background: rgba(75, 71, 71, 0.644);
 }
 
 .card{
     color: ghostwhite;
-    background: rgba(165, 163, 163, 0.644);
+    background:  rgba(75, 71, 71, 0.644);
 }
 
 .card-header {
