@@ -47,7 +47,6 @@ $("#addTrainButton").on("click", function(event) {
     $("#freqInput").val("");
   });
 
-
   //EVENT IN FIREBASE IS CREATED TO ADD NEW TRAIN AND CREATES ROW IN HTML WHEN USER ADDS AND SUBMITS
   database.ref().on("child_added", function(childSnapshot) {
     console.log(childSnapshot.val());
@@ -64,17 +63,16 @@ $("#addTrainButton").on("click", function(event) {
     console.log(trainTime);
     console.log(frequency);
 
-
 //MOMENT.JS TIME TRACKER
     var trainFreq = frequency;
     var trainTime = $("#trainTimeInput").val().trim();
 
     //PUSH BACK FIRST TIME BY 1 YEAR TO ASSURE IT COMES BEFORE CURRENT TIME
-    var trainTimeConverted = moment(trainTime, "HH:mm").subtract(1, "years");
+    var trainTimeConverted = moment(trainTime, "hh:mm").subtract(1, "years");
     console.log(trainTimeConverted);
     //Current Time
     var currentTime = moment();
-    console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+    console.log("CURRENT TIME: " + moment(currentTime).format("HH:mm"));
     //TIME DIFFERENCE 
     var timeDiff = moment().diff(moment(trainTimeConverted), "minutes");
     console.log("DIFFERENCE IN TIME: " + timeDiff);
