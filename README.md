@@ -8,3 +8,22 @@ A train schedule application that incorporates Firebase to host arrival and depa
 <p align="center">
   <img src = assets/images/train_screenshot.JPG/>
 </p>
+
+### Crafted With
+---
+* HTML5
+* CSS3
+* JavaScript/jQuery
+* [Moment.js](https://momentjs.com/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* GitBash
+* MVC (Model-View-Controller) Design Pattern
+
+### Hosting
+---
+* [Github Pages](https://pages.github.com/)
+
+
+### Authors
+---
+Dustin McGilvray
